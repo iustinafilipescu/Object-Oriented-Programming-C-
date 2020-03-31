@@ -1,25 +1,27 @@
-#include<stdio.h>
-#include "NumberList.h"
-
+#define _CRT_SECURE_NO_WARNINGS
+#include <iostream>
+#include <cstring>
+using namespace std;
+#include "Student.h"
+#include "fglobale.h"
 
 int main()
 {
-	NumberList d;
-	d.Init();
-	d.Add(10);
-	d.Add(1);
-	d.Add(13);
-	d.Add(11);
-	d.Add(4);
-	d.Add(65);
-	d.Add(98);
-	d.Add(32);
-	d.Add(9);
-	d.Add(15);
-	d.Add(30);
-	d.Sort();
+	Student i;
+	i.SetNume("Iustina Filipescu");
+	i.SetMate(8);
+	i.SetEngleza(9);
+	i.SetIstorie(9);
 
-	d.Print();
+	Student m;
+	m.SetNume("Miruna Iosub");
+	m.SetMate(9);
+	m.SetEngleza(10);
+	m.SetIstorie(7);
 
-	return 0;
+	cout << " Cmp Matematica"<<" " << CMate(i,m) << endl;
+	cout << " Cmp Engleza" <<" "<< CEngleza(i,m) << endl;
+	cout << " Cmp Istorie" <<" "<< CIstorie(i,m) << endl;
+	cout << " Cmp Medie" <<" "<< CMedie(i,m) << endl;
+	cout << " Cmp Nume" <<" "<< CNume(i,m) << endl;
 }
