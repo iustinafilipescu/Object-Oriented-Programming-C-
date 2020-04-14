@@ -54,7 +54,11 @@ public:
 
     V& operator[] (K key)
     {
-        
+        for (int i = 0; i < size; i++)
+        {
+            if (Keys[i] == key)
+                return Values[i];
+        }
         size++;
         Keys[size - 1] = key;
         return Values[size - 1];
@@ -74,6 +78,14 @@ public:
 
     void Set(K key, V value)
     {
+        for (int i = 0; i < size; i++)
+        {
+            if (Keys[i] == key)
+            {
+                Values[i] == value;
+                return;
+            }
+        }
      
         size++;
         Keys[size - 1] = key;
